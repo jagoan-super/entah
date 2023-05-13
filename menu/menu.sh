@@ -57,6 +57,7 @@ if [[ ${remainingDays} -le 0 ]]; then
 fi
 # OS Uptime
 uptime="$(uptime -p | cut -d " " -f 2-10)"
+uptimes="$(uptime -s)"
 # Download
 #Download/Upload today
 dtoday="$(vnstat -i eth0 | grep "today" | awk '{print $2" "substr ($3, 1, 1)}')"
@@ -97,6 +98,7 @@ echo -e "\e[33m ASN           \e[0m:  $ISP"
 echo -e "\e[33m CITY          \e[0m:  $CITY"
 echo -e "\e[33m DOMAIN        \e[0m:  $domain"	
 echo -e "\e[33m DATE & TIME   \e[0m:  $DATE2"	
+echo -e "\e[33m UPTIME        \e[0m:  $uptimes, $uptime"	
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "                 • SCRIPT MENU •                 "
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
