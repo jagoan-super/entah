@@ -113,7 +113,6 @@ echo -e "======-XRAYS/TROJAN-======" | tee -a /etc/log-create-user.log
 echo -e "==========================" | tee -a /etc/log-create-user.log
 echo -e "Remarks : ${user}" | tee -a /etc/log-create-user.log
 echo -e "Host/IP : ${domain}" | tee -a /etc/log-create-user.log
-echo -e "Wildcard : (bug.com).${domain}" | tee -a /etc/log-create-user.log
 echo -e "Port TLS : ${tls}" | tee -a /etc/log-create-user.log
 echo -e "Port none TLS : ${ntls}" | tee -a /etc/log-create-user.log
 echo -e "Port gRPC : ${tls}" | tee -a /etc/log-create-user.log
