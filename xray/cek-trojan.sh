@@ -1,4 +1,4 @@
-clear
+#!/bin/bash
 echo -n > /tmp/other.txt
 data=( `cat /etc/xray/config.json | grep '^#!' | cut -d ' ' -f 2 | sort | uniq`);
 echo -e "=========================="
