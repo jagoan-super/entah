@@ -1,22 +1,4 @@
-NC='\e[0m'
-DEFBOLD='\e[39;1m'
-RB='\e[31;1m'
-GB='\e[32;1m'
-YB='\e[33;1m'
-BB='\e[34;1m'
-MB='\e[35;1m'
-CB='\e[35;1m'
-WB='\e[37;1m'
-clear
-echo -n >/tmp/other.txt
-data=($(cat /usr/local/etc/xray/config.json | grep '^#&' | cut -d ' ' -f 2 | sort | uniq))
-echo -e "${BB}————————————————————————————————————————————————————${NC}"
-echo -e "              ${WB}Trojan User Login Account${NC}             "
-echo -e "${BB}————————————————————————————————————————————————————${NC}"
-for akun in "${data[@]}"; do
-if [[ -z "$akun" ]]; then
-akun="Tidak Ada"
-fi
+
 echo -n >/tmp/ipvmess.txt
 data2=($(cat /var/log/xray/access.log | tail -n 500 | cut -d " " -f 3 | sed 's/tcp://g' | cut -d ":" -f 1 | sort | uniq))
 for ip in "${data2[@]}"; do
