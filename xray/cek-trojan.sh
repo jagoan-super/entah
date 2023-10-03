@@ -38,10 +38,7 @@ rm -rf /tmp/iptrojan.txt
 done
 
 rm -rf /tmp/other.txt
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}                 • Vluks Store •                 $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu
