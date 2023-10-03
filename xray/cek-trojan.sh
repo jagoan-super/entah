@@ -32,7 +32,7 @@ echo > /dev/null
 else
 jum2=$(cat /tmp/iptrojan.txt | nl)
 echo -e "user : $akun"
-echo -e "       $jum2"
+echo -e "$jum2"
 fi
 rm -rf /tmp/iptrojan.txt
 done
