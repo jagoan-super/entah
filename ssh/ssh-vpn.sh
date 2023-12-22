@@ -368,7 +368,7 @@ cat > /etc/cron.d/re_otm <<-END
 END
 
 cat > /etc/cron.d/reboot_otomatis <<-END
-0 0 * * * root /usr/local/bin/reboot_otomatis
+0 0 * * * reboot
 END
 
 cat > /etc/cron.d/re_otm <<-END
