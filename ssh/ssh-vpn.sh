@@ -363,6 +363,13 @@ chmod +x xp
 chmod +x sshws
 cd
 
+cat > /etc/cron.d/re_otm <<-END
+0 0 * * * echo > /var/log/xray/error.log
+END
+
+cat > /etc/cron.d/reboot_otomatis <<-END
+0 0 * * * root /usr/local/bin/reboot_otomatis
+END
 
 cat > /etc/cron.d/re_otm <<-END
 SHELL=/bin/sh
