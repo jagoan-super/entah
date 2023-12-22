@@ -363,7 +363,7 @@ chmod +x xp
 chmod +x sshws
 cd
 
-cat > /etc/cron.d/re_otm <<-END
+cat > /etc/cron.d/clear <<-END
 0 0 * * * echo > /var/log/xray/error.log
 END
 
