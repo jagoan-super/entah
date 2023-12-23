@@ -364,12 +364,28 @@ chmod +x sshws
 cd
 
 cat > /etc/cron.d/clear <<-END
-0 0 * * * echo > /var/log/xray/error.log
+0 6 * * * root /usr/local/bin/clear
 END
 
-cat > /etc/cron.d/reboot_otomatis <<-END
-0 0 * * * reboot
+cat > /usr/local/bin/clear <<-END
+#!/bin/bash
+echo > /var/log/xray/error.log
 END
+
+chmod +x /usr/local/bin/clear
+
+############
+
+cat > /etc/cron.d/auto_reboot <<-END
+0 0 * * * root /usr/local/bin/clear
+END
+
+cat > /usr/local/bin/auto_reboot <<-END
+#!/bin/bash
+reboot
+END
+
+chmod +x /usr/local/bin/auto_reboot
 
 cat > /etc/cron.d/re_otm <<-END
 SHELL=/bin/sh
