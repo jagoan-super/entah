@@ -376,16 +376,16 @@ chmod +x /usr/local/bin/clear
 
 ############
 
-cat > /etc/cron.d/auto_reboot <<-END
-0 0 * * * root /usr/local/bin/clear
+cat > /etc/cron.d/reboot_otomatis <<-END
+0 0 * * * root /usr/local/bin/reboot_otomatis
 END
 
-cat > /usr/local/bin/auto_reboot <<-END
+cat > /usr/local/bin/reboot_otomatis <<-END
 #!/bin/bash
 reboot
 END
 
-chmod +x /usr/local/bin/auto_reboot
+chmod +x /usr/local/bin/reboot_otomatis
 
 cat > /etc/cron.d/re_otm <<-END
 SHELL=/bin/sh
